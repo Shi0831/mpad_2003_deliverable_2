@@ -1,6 +1,6 @@
-**Date**<br>
-**Course Code & Course Name**<br>
-**Student's First Name & Last Name**<br>
+**01/11/2026**<br>
+**MPAD 2003 Introductory Data Storytelling**<br>
+**Jiayi Shi**<br>
 **Presented to Jean-Sébastien Marier**<br>
 
 # Deliverable 2: Exploratory Data Analysis (EDA)
