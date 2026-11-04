@@ -22,8 +22,6 @@ Did you notice how to create a hyperlink? In Markdown, we put the clickable text
 
 And to create an unordered list, we simply put a star (`*`) before each item.
 
-## 1. Getting Data
-
 Use two hashtag symbols (`##`) to create a level 2 heading like this one.
 
 To include a screen capture, use the sample code below. Your images should be saved in the same folder as your `.md` file.
@@ -41,6 +39,12 @@ To include a screen capture, use the sample code below. Your images should be sa
 =IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
 ```
 This also shows how to create an ordered list. Simply put `1.` before each item.
+## 1. Getting Data
+Seeing a tree been cut at a construction site led me to Ottawa’s Tree Protection By-law and forced me to consider whether it is fair across electoral districts with different income levels. To investigate this question, I will analyze the [City of Ottawa’s  2025 Tree Protection Bylaw Annual Tree Removal Permit Statistics](https://open.ottawa.ca/documents/02bc1e9429fa489a9244b94c4efed4ba/about) to serve as data on tree felling. Also, I will analyze the income through [2021 Long Form Census - Ward Data](https://open.ottawa.ca/datasets/ottawa::2021-long-form-census-ward-data/about) which is also from the City of Ottawa. I put both sheet into Google Sheet, “[Tree Protection Bylaw Annual Tree Removal Permit Statistics 2025](https://docs.google.com/spreadsheets/d/1UtgN2_GMaAMOpVO0U_g64pcfHBgJEOwHV7A786Jj0sY/edit?gid=741959056#gid=741959056) and “[2021_Long_Form_Census_-_Ward_Data](https://docs.google.com/spreadsheets/d/1o5NkLEa9UJde59UErPtm6urUZeb2lH7aBXYFCZyP_lQ/edit?gid=1537556427#gid=1537556427)”. To mention that the "Planning applications" sub-table in the first table will not be used. Due to the lack of latest census data, the second sheet is based on 2021 census as it lacks data on rejections. Overall, the table structure is clear, and there are no obvious instances of missing data, and all data is discrete variables, and records the number of permits issued in column B. After seeing the data, I have a question, why is there no refusion under permit issued. There are 26 columns and 2603 rows on the second table. The table contains a large amount of data, making it difficult to read. However, for this study, I will only use the data from rows 90 to 105. Same, all data from this sheet is discrete variables. It compiled data of numbers that have total income between $10,000 and $19,999 in row 94 and $20,000 to $29,999 in row 95.
+![](MAPD-2003-A2-1.png)<br>
+*Figure 1: A screenshot of 2025 Tree Protection Bylaw Annual Tree Removal Permit Statistics*
+![](MAPD-2003-A2-2.png)<br>
+*Figure 2: A screenshot of 2021 Long Form Census - Ward Data*
 
 ## 2. Understanding Data
 
