@@ -21,28 +21,11 @@ I have been assigning different versions of this project to my digital journalis
 Did you notice how to create a hyperlink? In Markdown, we put the clickable text between square brackets and the actual URL between parentheses.
 
 And to create an unordered list, we simply put a star (`*`) before each item.
-
-Use two hashtag symbols (`##`) to create a level 2 heading like this one.
-
-To include a screen capture, use the sample code below. Your images should be saved in the same folder as your `.md` file.
-
-![](import-screen-capture.png)<br>
-*Figure 1: The "Import file" prompt on Google Sheets.*
-
-**Here are examples of functions and lines of code put in grey boxes:**
-
-1. If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
-1. If you want to include the entire line of code, do the same thing, albeit with your entire code: `=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)`.
-1. Alternatively, you can put your code in an independent box using the template below:
-
-``` r
-=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
-```
-This also shows how to create an ordered list. Simply put `1.` before each item.
 ## 1. Getting Data
+
 Seeing a tree being cut down at a construction site led me to look into Ottawa’s Tree Protection By-law and drove me to question whether it is applied fairly across electoral districts with different income levels. To investigate this question, I will analyze two datasets published by the City of Ottawa: [2025 Tree Protection Bylaw Annual Tree Removal Permit Statistics](https://open.ottawa.ca/documents/02bc1e9429fa489a9244b94c4efed4ba/about) and [2021 Long Form Census – Ward Data](https://open.ottawa.ca/datasets/ottawa::2021-long-form-census-ward-data/about). hese datasets provide information on tree removal permit decisions and income distributions across wards, respectively. To open them in Google Sheets, I need to select upload under import and then click “Create new spreadsheet” and named the file by “[Tree Protection Bylaw Annual Tree Removal Permit Statistics 2025](https://docs.google.com/spreadsheets/d/1UtgN2_GMaAMOpVO0U_g64pcfHBgJEOwHV7A786Jj0sY/edit?gid=741959056#gid=741959056) and “[2021_Long_Form_Census_-_Ward_Data](https://docs.google.com/spreadsheets/d/1o5NkLEa9UJde59UErPtm6urUZeb2lH7aBXYFCZyP_lQ/edit?gid=1537556427#gid=1537556427)”. The “Planning applications” worksheet in the first workbook will not be used in this analysis. The first form contains 7 worksheet including English and French version and a worksheet containing definitions. Take the first one as an example, it has 9 columns and 26 rows. Its first column contains nominal variable data, and the rest are discrete variable data. The second sheet contains 26 columns and 2,603 rows but only rows from 90 to 105, which contains data of total income between $10,000 and $19,999 in row 94 and $20,000 to $29,999 in row 95. will be used and all data is discrete variables. After seeing the first data, I have a question, why are applications rejected in some wards but not in others? 
 ![](MAPD-2003-A2-1.png)<br>
-*Figure 1: A screenshot of 2025 Tree Protection Bylaw Annual Tree Removal Permit Statistics*
+*Figure 1: A screenshot of 2025 Tree Protection Bylaw Annual Tree Removal Permit Statistics*<br>
 ![](MAPD-2003-A2-2.png)<br>
 *Figure 2: A screenshot of 2021 Long Form Census - Ward Data*
 
@@ -50,34 +33,38 @@ Seeing a tree being cut down at a construction site led me to look into Ottawa�
 
 ### 2.1. VIMO Analysis
 
-Use three hashtag symbols (`###`) to create a level 3 heading like this one. Please follow this template when it comes to level 1 and level 2 headings. However, you can use level 3 headings as you see fit.
 
-Insert text here.
+Due to the research question, both sheets need to be analyzed. For the first sheet, which is” 2025 Tree Protection Bylaw Annual Tree Removal Permit Statistics”, the rate of rejected applications in licensing decisions can be researched. In the second sheet, the income situation in each ward can be researched. Thus, one of the key points for my research is to combine both together. For the first sheets, the "Planning applications" worksheet will not be researched due to the lack of deny. The data in second sheet is complete and there isn’t any blank. When it comes to the accuracy of data measurement, the data from the first table is collected by government staff after the forestry inspector has reviewed the arborist’s report and conducted an on-site inspection if necessary. Due to its origin, the data can be considered as accurate although it can’t correctly show the realistic situation of cutting down trees, because of resident cutting trees without applying. However, there are some issues for the accuracy that should be considered in second sheet. This sheet combines data of 25% of the population, and it cannot represent everyone's income situation. For this reason, the data can only be considered as a reflection of the overall trend instead of actual situation. Since both sets of data are provided by the Canadian government, both sheet can be considered to be objective.
 
-Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
 
-**For example:**
 
-As seen in Bounegru & Gray (2011), a data visualization should be clear...
 
 ### 2.2. Cleaning Data
 
-Insert text here.
+Since there are multiple worksheets to the first sheet, to clean data, the first step is to combine them into a sheet that contains all data. Upon observation, all the work sheets have the same starting rows. Thus, making a new sheet with the same starting rows as shown in Figure 3 can be considered as the best way to clean data. When organizing the relevant data, the values are summed up and compiled into a final table. Finally, by changing numbers of and arranging it from largest to smallest in the permit Issued total the data looks more prominent, as shown in Figure 4. In this step, “sum” function ```=SUM(B3,J3)``` is be used and filters have been created. For the second table, due to the large number of rows, by using the “search and replace” to check the row head and find the rows contains the data, the data I needed is found located between rows 90 and 105. Thus, remaining rows have been removed. Following this, all the data from text format are changed into numerical format to make it easier to read as shown in figure 5. Since my first table used ward numbers as columns, a swap of the rows and columns by using “TRANSPOSE” ```=TRANSPOSE('2021_Long_Form_Census_-_Ward_Data'!A1:Y17)```as shown in figure 6 can be considered as a pre-work for further research.
 
+![](MAPD-2003-A2-3.png)<br>
+*Figure 3: First data cleaning version for 2025 Tree Protection Bylaw Annual Tree Removal Permit Statistics*<br>
+
+![](MAPD-2003-A2-4.png)<br>
+*Figure 4: Final data cleaning version for 2025 Tree Protection Bylaw Annual Tree Removal Permit Statistics*<br>
+
+![](MAPD-2003-A2-5.png)<br>
+*Figure 5: First data cleaning for 2021_Long_Form_Census_-_Ward_Data*<br>
+
+![](MAPD-2003-A2-6.png)<br>
+*Figure 6: Final data cleaning for 2021_Long_Form_Census_-_Ward_Data*
 ### 2.3. Analyzing Data
 
-Insert text here.
-
-**This section should include a screen capture of your pivot table, like so:**
-
-![](pivot-table-screen-capture.png)<br>
-*Figure 2: This pivot table shows...*
-
-**This section should also include a screen capture of your exploratory chart, like so:**
-
-![](chart-screen-capture.png)<br>
-*Figure 3: This exploratory chart shows...*
-
+For the data summary table for my first pivot table, ward as the row and custom calculation “Permit Denied total/ total” ```=IF(('Permit Issued total'+ 'Permit Denied total')=0, "0.00%", 'Permit Denied total'/('Permit Issued total'+ 'Permit Denied total'))```as the value has been chosen. The reason that I chose these two instead of choosing wards and “Permit Denied total” or “Permit Issued total” is because this calculation shows the proportion of tree removal permit applications that were denied in each ward. Through the data analysis table, I found that the refusion rate of ward 19 is the highest and is almost 5% higher than the second one. In my second sheet, ward as the row is still be chosen in pivoted table. In the value, the number of people in each income bracket divided by the total number of people has been picked as value. By doing that, I can easily see the proportion of residents at different income levels within each selection is highly valuable for my research. After dealing with the data, I’ve noticed that there are a particularly large number of high-income individuals (earning more than $100,000) in Ward 15. In my following research, I intend to combine the two datasets and specifically analyze whether the rejection rate in each electoral district is related to its income distribution.
+![](MAPD-2003-A2-7.png)<br>
+*Figure 7: Image of pivot table for 2025 Tree Protection Bylaw Annual Tree Removal Permit Statistics*<br>
+![](MAPD-2003-A2-T1.png)<br>
+*Figure 8: Chart shows the rejection rate for each ward*<br>
+![](MAPD-2003-A2-8.png)<br>
+*Figure 9: Image of pivot table for 2021_Long_Form_Census_-_Ward_Data*<br>
+![](MAPD-2003-A2-T2.png)<br>
+*Figure 10: Chart shows the income rate for each ward*
 ## 3. Delivering Data
 
 Insert text here.
