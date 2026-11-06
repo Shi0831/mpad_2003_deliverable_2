@@ -67,12 +67,10 @@ For the data summary table for my first pivot table, ward as the row and custom 
 *Figure 10: Chart shows the income rate for each ward*
 ## 3. Delivering Data
 
-Insert text here.
+For my further research, I hope I can get the exact data of the average income for each ward, which can be used in my research most easily. Otherwise, I will take the median of all income ranges and assume the maximum income will be 20k. Obviously, it will cause there will be some differences to the fact, but it will have a similar trend to help me with my study. Furthermore, to finish the story, I consider that I need a direct voice from the ward resident. Thus, I consider that I can have interviews with the residents and ask them whether they consider it fair or not. In my following research for my story background, I notice that there are residents who are dissatisfied with the rule of cutting down trees. For example, Nicole Robert can’t cut down the tree that is damaging her house because she does not get the permission (CTV News, 2026). Bider also records residents feel unsatisfied with the government due to the tree failing in his article (Bider, E. R.,2024). Bider mentioned that residents protesting the felling of trees try to cooperate with government but feel disappointed due to a lack of transparency and the inaction of the agency. I consider that it maybe also shows a injustice and can be a background message for my study.
 
 ## 4. References
 
-Include a list of your references here. Please follow [APA](https://apastyle.apa.org/style-grammar-guidelines/references) or [MLA](https://www.mla.org/MLA-Style) guidelines for references. Hanging paragraphs aren't required though.
+Bider, E. R., & Carleton University. (2024). Imagining Tree Futures of Ottawa : Climate Change, Activism and Politics in the Urban Forest. Thesis (Ph.D.) - Carleton University, 2024.
+Dyson, D. (2026, June 18). A tree in this Ottawa homeowner’s yard is destroying her home, but she can’t cut it down. CTV News Ottawa. https://www.ctvnews.ca/ottawa/article/a-tree-in-this-ottawa-homeowners-yard-is-destroying-her-home-but-she-cant-cut-it-down/
 
-**Here's an example:**
-
-Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
